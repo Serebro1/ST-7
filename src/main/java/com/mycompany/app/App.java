@@ -43,7 +43,7 @@ public class App {
             }
         } catch (Exception e) {
             System.out.println("Error");
-            System.out.println(e);
+            System.out.println(e.getMessage());
         } finally {
             webDriver.quit();
         }
