@@ -35,10 +35,9 @@ public class App {
             String forecastTable = getWeatherForecast(webDriver);
             System.out.println(forecastTable);
 
-            String markdownTable = Task3.getWeatherForecastAsMarkdown(webDriver);
-            String fileName = "result/weather_forecast.md";
+            String fileName = "result/forecast.txt";
             try (java.io.FileWriter writer = new java.io.FileWriter(fileName, java.nio.charset.StandardCharsets.UTF_8)) {
-                writer.write(markdownTable);
+                writer.write(forecastTable);
                 System.out.println("Таблица сохранена в файл: " + fileName);
             }
         } catch (Exception e) {
